@@ -12,6 +12,11 @@ public class Estructuras {
         l.insertar(14);
         l.insertarPrincipio(22);
         l.insertar(41);
+        l.eliminarUltimo();
+        l.eliminarUltimo();
+        l.eliminarUltimo();
+        l.eliminarUltimo();
+        l.insertarPrincipio(13);
         System.out.println(l.toString());
     }
     

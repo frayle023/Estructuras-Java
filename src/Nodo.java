@@ -28,5 +28,9 @@ public class Nodo {
         this.siguiente = siguiente;
     }
     
+    @Override
+    public String toString(){
+        return dato + " -> ";
+    }
     
 }

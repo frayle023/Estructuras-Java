@@ -1,10 +1,12 @@
 package estructuras;
 
+import estructurasdatos.ListaEnlazada;
+
 public class Estructuras {
 
     public static void main(String[] args) {
-        //Iniciando   
-        int x = 8;
+        ListaEnlazada l = new ListaEnlazada();
+        System.out.println(l.esVacia());
     }
     
 }

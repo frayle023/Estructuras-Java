@@ -49,6 +49,23 @@ public class ListaEnlazada {
         this.num_nodos++;
     }
     
+    public void eliminarUltimo(){
+        if(!this.esVacia()){
+            if(primero.getSiguiente() == null){
+                this.primero = null;
+            }else{
+                Nodo temporal = primero;
+                Nodo previo = null;
+                while(temporal.getSiguiente() != null){
+                    previo = temporal;
+                    temporal = temporal.getSiguiente();
+                }
+                previo.setSiguiente(null);
+            }
+            this.num_nodos--;
+        }
+    }
+    
     @Override
     public String toString(){
         if(this.esVacia()) return "Lista Vacia";

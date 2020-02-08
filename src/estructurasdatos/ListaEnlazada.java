@@ -66,6 +66,14 @@ public class ListaEnlazada {
         }
     }
     
+    public void eliminarPrincipio(){
+        if(!this.esVacia()){
+            Nodo temporal = primero.getSiguiente();
+            primero = temporal;
+            this.num_nodos--;
+        }
+    }
+    
     @Override
     public String toString(){
         if(this.esVacia()) return "Lista Vacia";

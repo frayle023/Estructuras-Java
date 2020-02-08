@@ -8,10 +8,11 @@ public class Estructuras {
         ListaEnlazada l = new ListaEnlazada();
         l.insertar(8);
         l.insertar(16);
-        l.insertar(25);
-        l.insertar(27);
-        l.insertar(9);
-        System.out.println(l.getContador());
+        l.insertarPrincipio(5);
+        l.insertar(14);
+        l.insertarPrincipio(22);
+        l.insertar(41);
+        System.out.println(l.toString());
     }
     
 }

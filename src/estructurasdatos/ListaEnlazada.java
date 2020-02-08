@@ -37,6 +37,18 @@ public class ListaEnlazada {
         this.num_nodos++;
     }
     
+    public void insertarPrincipio(Object dato){
+        Nodo nuevo = new Nodo(dato);
+        if(this.esVacia()){
+            this.primero = nuevo;
+        }else{
+            Nodo temporal = primero;
+            nuevo.setSiguiente(temporal);
+            primero = nuevo;
+        }
+        this.num_nodos++;
+    }
+    
     @Override
     public String toString(){
         if(this.esVacia()) return "Lista Vacia";

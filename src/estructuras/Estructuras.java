@@ -5,30 +5,19 @@ import estructurasdatos.ListaEnlazada;
 public class Estructuras {
 
     public static void main(String[] args) {
-        ListaEnlazada l = new ListaEnlazada();
-        l.insertar(8);
-        l.insertar(16);
-        l.insertarPrincipio(44);
-
-        l.insertarPrincipio(13);
-        l.insertar(41);
-
-        l.insertarPrincipio(15);
-        l.insertar(56);
-        l.insertar(48);
-
-        l.insertar(16);
-        l.insertarPrincipio(16);
-        l.insertar(16);
-        l.insertar(41);
+        ListaEnlazada lista = new ListaEnlazada();
+     
+        lista.insertarFinal(8);
+        lista.insertarFinal(16);
+        lista.insertarFinal(4);
+        lista.insertarFinal(44);
+        lista.insertarPrincipio(21);
+        lista.insertarPrincipio(22);
+        lista.eliminarPorIndice(6);
         
-       
-        l.eliminarPorIndice(12);
-        l.eliminarPorIndice(8);
-        l.eliminarPorIndice(1);
-   
-        System.out.println(l.toString());
-        System.out.println("Hay: " + l.getContador() + " nodos");
+        System.out.println(lista.toString());
+        System.out.println("Hay: " + lista.getContador() + " nodos");
+        
     }
     
 }

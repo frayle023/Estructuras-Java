@@ -74,6 +74,29 @@ public class ListaEnlazada {
         }
     }
     
+    public void eliminarPorDato(Object dato){
+        if(!this.esVacia()){
+            if(primero.getDato() == dato){
+                primero = primero.getSiguiente();
+                this.num_nodos--;
+            }else{
+                Nodo temporal = primero.getSiguiente();
+                Nodo previo = primero;
+                boolean encontrado = false;
+                while(temporal != null && !encontrado){
+                    if(temporal.getDato() == dato){
+                        previo.setSiguiente(temporal.getSiguiente());
+                        this.num_nodos--;
+                        encontrado = true;
+                    }
+                    previo = temporal;
+                    temporal = temporal.getSiguiente();
+                }
+               
+            }
+        }
+    }
+    
     @Override
     public String toString(){
         if(this.esVacia()) return "Lista Vacia";

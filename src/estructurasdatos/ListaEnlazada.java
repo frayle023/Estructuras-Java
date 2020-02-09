@@ -97,10 +97,9 @@ public class ListaEnlazada {
     }
     
     public void eliminarPorIndice(int indice){
-        if(indice <= this.num_nodos){
+        if(indice <= num_nodos){
             if(indice == 1){
                 primero = primero.getSiguiente();
-                this.num_nodos--;
             }else{
                 Nodo temporal = primero.getSiguiente();
                 Nodo previo = primero;
@@ -109,8 +108,8 @@ public class ListaEnlazada {
                     temporal = temporal.getSiguiente();
                 }
                 previo.setSiguiente(temporal.getSiguiente());
-                this.num_nodos--;
             }
+            this.num_nodos--;
         }
     }
     

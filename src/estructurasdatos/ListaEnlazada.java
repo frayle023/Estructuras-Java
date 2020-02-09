@@ -129,6 +129,24 @@ public class ListaEnlazada {
         return nodo;
     }
     
+    public void ordenamientoBurbuja(){
+        if(!this.esVacia()){
+            Nodo temporal = primero;
+            while(temporal.getSiguiente() != null){
+                Nodo siguiente = temporal.getSiguiente();
+                while(siguiente != null){
+                    if(temporal.getDato().toString().compareTo(siguiente.getDato().toString()) > 0){
+                        Object dato = temporal.getDato();
+                        temporal.setDato(siguiente.getDato());
+                        siguiente.setDato(dato);
+                    }
+                    siguiente = siguiente.getSiguiente();
+                }
+                temporal = temporal.getSiguiente();
+            }
+        }
+    }
+    
     @Override
     public String toString(){
         if(this.esVacia()) return "Lista Vacia";

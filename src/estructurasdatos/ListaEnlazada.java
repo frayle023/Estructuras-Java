@@ -92,7 +92,6 @@ public class ListaEnlazada {
                     previo = temporal;
                     temporal = temporal.getSiguiente();
                 }
-               
             }
         }
     }

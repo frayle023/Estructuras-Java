@@ -23,10 +23,9 @@ public class Estructuras {
         l.insertar(41);
         
        
-        l.eliminarPorDato(48);
-        l.eliminarPorDato(8);
-        l.eliminarPorDato(41);
-        l.eliminarPorDato(13);
+        l.eliminarPorIndice(12);
+        l.eliminarPorIndice(8);
+        l.eliminarPorIndice(1);
    
         System.out.println(l.toString());
         System.out.println("Hay: " + l.getContador() + " nodos");

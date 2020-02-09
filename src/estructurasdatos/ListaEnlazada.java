@@ -96,6 +96,24 @@ public class ListaEnlazada {
         }
     }
     
+    public void eliminarPorIndice(int indice){
+        if(indice <= this.num_nodos){
+            if(indice == 1){
+                primero = primero.getSiguiente();
+                this.num_nodos--;
+            }else{
+                Nodo temporal = primero.getSiguiente();
+                Nodo previo = primero;
+                for(int i = 2; i < indice; i++){
+                    previo = temporal;
+                    temporal = temporal.getSiguiente();
+                }
+                previo.setSiguiente(temporal.getSiguiente());
+                this.num_nodos--;
+            }
+        }
+    }
+    
     @Override
     public String toString(){
         if(this.esVacia()) return "Lista Vacia";

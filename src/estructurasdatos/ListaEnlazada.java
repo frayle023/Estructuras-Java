@@ -23,7 +23,7 @@ public class ListaEnlazada {
         return num_nodos;
     }
     
-    public void insertar(Object dato){
+    public void insertarFinal(Object dato){
         Nodo nuevo = new Nodo(dato);
         if(this.esVacia()){
             this.primero = nuevo;
@@ -111,6 +111,22 @@ public class ListaEnlazada {
             }
             this.num_nodos--;
         }
+    }
+    
+    public Nodo getNodoPorIndice(int indice){
+        Nodo nodo = new Nodo();
+        if(indice <= num_nodos){
+            if(indice == 1){
+                nodo = primero;
+            }else{
+                Nodo temporal = primero.getSiguiente();
+                for(int i = 2; i < indice; i++){
+                    temporal = temporal.getSiguiente();
+                }
+                nodo = temporal;
+            }
+        }
+        return nodo;
     }
     
     @Override

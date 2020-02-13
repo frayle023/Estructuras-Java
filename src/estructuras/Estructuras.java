@@ -24,7 +24,7 @@ public class Estructuras {
         
          
         
-        lista.ordenamientoBurbuja();
+        lista.reversa();
         System.out.println(lista.toString());
         System.out.println("Hay: " + lista.getContador() + " nodos");
         

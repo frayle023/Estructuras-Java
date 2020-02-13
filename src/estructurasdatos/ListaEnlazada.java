@@ -147,6 +147,12 @@ public class ListaEnlazada {
         }
     }
     
+    public void reversa(){
+        if(num_nodos > 1){
+        
+        }
+    }
+    
     @Override
     public String toString(){
         if(this.esVacia()) return "Lista Vacia";

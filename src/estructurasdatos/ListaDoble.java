@@ -51,6 +51,21 @@ public class ListaDoble {
         this.num_nodos++;
     }
     
+    public void eliminarPrincipio(){
+        if(!this.esVacia()){
+            NodoDoble temporal = primero.getDer();
+            if(temporal != null) temporal.setIzq(null);
+            primero = temporal;
+            this.num_nodos--;
+        }
+    }
+    
+    public void eliminarFinal(){
+        if(!this.esVacia()){
+            
+        }
+    }
+    
     @Override
     public String toString(){
         if(this.esVacia()) return "Lista Vacia";

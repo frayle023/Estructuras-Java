@@ -135,7 +135,7 @@ public class ListaEnlazada {
             while(temporal.getSiguiente() != null){
                 Nodo siguiente = temporal.getSiguiente();
                 while(siguiente != null){
-                    if(temporal.getDato().toString().compareTo(siguiente.getDato().toString()) > 0){
+                    if(temporal.compareTo(siguiente)){
                         Object dato = temporal.getDato();
                         temporal.setDato(siguiente.getDato());
                         siguiente.setDato(dato);

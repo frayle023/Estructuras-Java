@@ -1,11 +1,12 @@
 package estructuras;
 
 import estructurasdatos.ListaDoble;
+import estructurasdatos.ListaEnlazada;
 
 public class Estructuras {
 
     public static void main(String[] args) {
-        ListaDoble lista = new ListaDoble();
+        ListaEnlazada lista = new ListaEnlazada();
          lista.insertarPrincipio(60);
          lista.insertarPrincipio(50);
          lista.insertarPrincipio(40);
@@ -15,12 +16,15 @@ public class Estructuras {
          lista.insertarFinal(100);
          lista.insertarFinal(200);
          lista.insertarFinal(300);
+         lista.insertarPrincipio(44);
+         lista.insertarPrincipio(1);
+         lista.insertarPrincipio(8);
          
          
         
          
         
-        lista.reversa();
+        lista.ordenamientoBurbuja();
         System.out.println(lista.toString());
         System.out.println("Hay: " + lista.getContador() + " nodos");
         

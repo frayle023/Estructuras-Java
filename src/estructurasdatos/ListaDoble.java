@@ -60,6 +60,29 @@ public class ListaDoble {
         }
     }
     
+    public void reversa(){
+        if(num_nodos > 1){
+            NodoDoble copia = primero;
+            NodoDoble temporal = primero;
+            while(temporal.getDer() != null){
+                NodoDoble derecho = temporal.getDer();
+                NodoDoble siguiente = derecho.getDer();
+                temporal.setDer(siguiente);
+                if(siguiente != null) siguiente.setIzq(temporal);
+                NodoDoble auxiliar = temporal;
+                while(temporal.getIzq() != null){
+                    temporal = temporal.getIzq();
+                }
+                derecho.setIzq(null);
+                derecho.setDer(temporal);
+                temporal.setIzq(derecho);
+                copia = derecho;
+                temporal = auxiliar;
+            }
+          primero = copia;
+        }
+    }
+    
     public void eliminarFinal(){
         if(!this.esVacia()){
             if(primero.getDer() == null){

@@ -6,19 +6,21 @@ public class Estructuras {
 
     public static void main(String[] args) {
         ListaDoble lista = new ListaDoble();
-         lista.insertarPrincipio(12);
-         lista.insertarPrincipio(16);
-         lista.insertarPrincipio(18);
-         lista.insertarFinal(14);
-         lista.insertarFinal(22);
-         lista.insertarPrincipio(5);
+         lista.insertarPrincipio(60);
+         lista.insertarPrincipio(50);
+         lista.insertarPrincipio(40);
+         lista.insertarPrincipio(30);
+         lista.insertarPrincipio(20);
+         lista.insertarPrincipio(10);
+         lista.insertarFinal(100);
+         lista.insertarFinal(200);
+         lista.insertarFinal(300);
          
-         lista.eliminarFinal();
-         lista.eliminarFinal();
-         lista.eliminarFinal();
          
         
+         
         
+        lista.reversa();
         System.out.println(lista.toString());
         System.out.println("Hay: " + lista.getContador() + " nodos");
         

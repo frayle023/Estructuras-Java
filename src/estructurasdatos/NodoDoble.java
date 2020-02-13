@@ -41,8 +41,8 @@ public class NodoDoble {
     
     @Override
     public String toString(){
-        String datoIzq = this.getIzq() == null ? "null" : this.getIzq().getDato().toString();
-        String datoDer = this.getDer() == null ? "null" : this.getDer().getDato().toString();
+        String datoIzq = this.getIzq() == null ? "inicio" : this.getIzq().getDato().toString();
+        String datoDer = this.getDer() == null ? "final" : this.getDer().getDato().toString();
         return datoIzq + " <=[" + this.dato + "]=> " + datoDer + "\n";
     }
     

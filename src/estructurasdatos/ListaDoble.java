@@ -62,7 +62,17 @@ public class ListaDoble {
     
     public void eliminarFinal(){
         if(!this.esVacia()){
-            
+            if(primero.getDer() == null){
+                primero = null;
+            }else{
+                NodoDoble temporal = primero;
+                while(temporal.getDer() != null){
+                    temporal = temporal.getDer();
+                }
+                temporal.getIzq().setDer(null);
+                temporal.setIzq(null);
+            }
+            this.num_nodos--;
         }
     }
     

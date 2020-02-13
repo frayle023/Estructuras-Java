@@ -30,6 +30,10 @@ public class Nodo {
         this.siguiente = siguiente;
     }
     
+    public boolean compareTo(Nodo nodo){
+        return this.dato.toString().compareTo(nodo.getDato().toString()) > 0;
+    }
+    
     @Override
     public String toString(){
         return dato + " -> ";

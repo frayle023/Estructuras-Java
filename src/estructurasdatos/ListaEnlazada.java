@@ -49,7 +49,7 @@ public class ListaEnlazada {
         this.num_nodos++;
     }
     
-    public void eliminarUltimo(){
+    public void eliminarFinal(){
         if(!this.esVacia()){
             if(primero.getSiguiente() == null){
                 this.primero = null;

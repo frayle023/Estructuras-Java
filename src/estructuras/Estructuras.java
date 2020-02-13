@@ -13,9 +13,10 @@ public class Estructuras {
          lista.insertarFinal(22);
          lista.insertarPrincipio(5);
          
-         lista.eliminarPrincipio();
-         lista.eliminarPrincipio();
-         lista.eliminarPrincipio();
+         lista.eliminarFinal();
+         lista.eliminarFinal();
+         lista.eliminarFinal();
+         
         
         
         System.out.println(lista.toString());

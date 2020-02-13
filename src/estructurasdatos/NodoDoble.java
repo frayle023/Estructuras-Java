@@ -41,6 +41,12 @@ public class NodoDoble {
     
     @Override
     public String toString(){
-        return " <= " + this.dato + " => ";
+        String datoIzq = this.getIzq() == null ? "null" : this.getIzq().getDato().toString();
+        String datoDer = this.getDer() == null ? "null" : this.getDer().getDato().toString();
+        return datoIzq + " <=[" + this.dato + "]=> " + datoDer + "\n";
+    }
+    
+    public String StringLineal(){
+        return this.dato + " - ";
     }
 }

@@ -60,7 +60,7 @@ public class ListaEnlazada {
                     previo = temporal;
                     temporal = temporal.getSiguiente();
                 }
-                previo.setSiguiente(null);
+                if(previo != null) previo.setSiguiente(null);
             }
             this.num_nodos--;
         }

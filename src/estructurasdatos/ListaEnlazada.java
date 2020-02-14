@@ -135,7 +135,7 @@ public class ListaEnlazada {
                 temporal = temporal.getSiguiente();
             }
             nuevo.setSiguiente(temporal);
-            previo.setSiguiente(nuevo);
+            if(previo != null) previo.setSiguiente(nuevo);
         }
         this.num_nodos++;
     }

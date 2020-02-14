@@ -39,6 +39,10 @@ public class NodoDoble {
         this.der = der;
     }
     
+    public boolean compareTo(NodoDoble nodo){
+        return this.dato.toString().compareTo(nodo.getDato().toString()) > 0;
+    }
+    
     @Override
     public String toString(){
         String datoIzq = this.getIzq() == null ? "inicio" : this.getIzq().getDato().toString();

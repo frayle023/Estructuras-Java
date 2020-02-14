@@ -149,7 +149,14 @@ public class ListaEnlazada {
     
     public void reversa(){
         if(num_nodos > 1){
-        
+            Nodo auxiliar = primero;
+            Nodo temporal = null;
+            while(auxiliar.getSiguiente() != null){
+                temporal = auxiliar.getSiguiente();
+                auxiliar.setSiguiente(temporal.getSiguiente());
+                temporal.setSiguiente(primero);
+                primero = temporal;
+            }        
         }
     }
     

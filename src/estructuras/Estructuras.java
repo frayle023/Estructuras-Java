@@ -17,11 +17,11 @@ public class Estructuras {
       
          lista.insertarPorIndice(80, 1000);
          lista.insertarPorIndice(90, -1);
-         lista.insertarPorIndice(5, 10);
+         lista.insertarPorIndice(5, 9);
         
          
         
-        //lista.reversa();
+        lista.reversa();
         System.out.println(lista.toString());
         System.out.println("Hay: " + lista.getContador() + " nodos");
         

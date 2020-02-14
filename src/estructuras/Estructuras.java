@@ -15,7 +15,7 @@ public class Estructuras {
          lista.insertarPrincipio("b");
          lista.insertarFinal("i");
       
-         lista.ordenamientoBurbuja();
+         lista.insertarPorIndice("c", 8);
        
         
          

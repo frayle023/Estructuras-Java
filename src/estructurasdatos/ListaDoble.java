@@ -46,6 +46,32 @@ public class ListaDoble {
         this.num_nodos++;
     }
     
+    public void insertarPorIndice(Object dato, int indice){
+        NodoDoble nuevo = new NodoDoble(dato);
+        if(this.esVacia() || indice == 1){
+            nuevo.setDer(primero);
+            if(primero != null) primero.setIzq(nuevo);
+            primero = nuevo;
+        }else if(num_nodos < indice || indice <= 0){
+            NodoDoble temporal = primero;
+            while(temporal.getDer() != null){
+                temporal = temporal.getDer();
+            }
+            nuevo.setIzq(temporal);
+            temporal.setDer(nuevo);
+        }else{
+            NodoDoble temporal = primero;
+            for(int i = 1; i < indice; i++){
+                temporal = temporal.getDer();
+            }
+            nuevo.setDer(temporal);
+            nuevo.setIzq(temporal.getIzq());
+            temporal.getIzq().setDer(nuevo);
+            temporal.setIzq(nuevo);
+        }
+        this.num_nodos++;
+    }
+    
     public void eliminarPrincipio(){
         if(!this.esVacia()){
             NodoDoble temporal = primero.getDer();

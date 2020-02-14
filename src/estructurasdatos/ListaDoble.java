@@ -57,24 +57,17 @@ public class ListaDoble {
     
     public void reversa(){
         if(num_nodos > 1){
-            NodoDoble copia = primero;
-            NodoDoble temporal = primero;
-            while(temporal.getDer() != null){
-                NodoDoble derecho = temporal.getDer();
-                NodoDoble siguiente = derecho.getDer();
-                temporal.setDer(siguiente);
-                if(siguiente != null) siguiente.setIzq(temporal);
-                NodoDoble auxiliar = temporal;
-                while(temporal.getIzq() != null){
-                    temporal = temporal.getIzq();
-                }
-                derecho.setIzq(null);
-                derecho.setDer(temporal);
-                temporal.setIzq(derecho);
-                copia = derecho;
-                temporal = auxiliar;
-            }
-          primero = copia;
+           NodoDoble auxiliar = primero;
+           NodoDoble temporal = null;
+           while(auxiliar.getDer() != null){
+               temporal = auxiliar.getDer();
+               auxiliar.setDer(temporal.getDer());
+               if(temporal.getDer() != null) temporal.getDer().setIzq(auxiliar);
+               temporal.setDer(primero);
+               temporal.setIzq(null);
+               primero.setIzq(temporal);
+               primero = temporal;
+           }
         }
     }
     

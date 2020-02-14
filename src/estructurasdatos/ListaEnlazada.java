@@ -113,6 +113,33 @@ public class ListaEnlazada {
         }
     }
     
+    public void insertarPorIndice(Object dato, int indice){
+        Nodo nuevo = new Nodo(dato);
+        if(this.esVacia()){
+            primero = nuevo;
+        }else if(indice > num_nodos || indice <= 0){
+            Nodo temporal = primero;
+            while(temporal.getSiguiente() != null){
+                temporal = temporal.getSiguiente();
+            }
+            temporal.setSiguiente(nuevo);
+        }else if(indice == 1){
+           Nodo temporal = primero;
+           nuevo.setSiguiente(temporal);
+           primero = nuevo;
+        }else{
+            Nodo temporal = primero;
+            Nodo previo = null;
+            for(int i = 1; i < indice; i ++){
+                previo = temporal;
+                temporal = temporal.getSiguiente();
+            }
+            nuevo.setSiguiente(temporal);
+            previo.setSiguiente(nuevo);
+        }
+        this.num_nodos++;
+    }
+    
     public Nodo getNodoPorIndice(int indice){
         Nodo nodo = new Nodo();
         if(indice <= num_nodos){

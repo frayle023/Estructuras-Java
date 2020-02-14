@@ -13,13 +13,8 @@ public class Estructuras {
          lista.insertarPrincipio(30);
          lista.insertarPrincipio(20);
          lista.insertarPrincipio(10);
-         lista.insertarFinal(100);
-         lista.insertarFinal(200);
-         lista.insertarFinal(300);
-         lista.insertarPrincipio(44);
-         lista.insertarPrincipio(1);
-         lista.insertarPrincipio(8);
-         
+         lista.insertarFinal(70);
+      
          
         
          

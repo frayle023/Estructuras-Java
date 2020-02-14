@@ -87,6 +87,24 @@ public class ListaDoble {
         }
     }
     
+    public void ordenamientoBurbuja(){
+        if(!this.esVacia()){
+            NodoDoble temporal = primero;
+            while(temporal.getDer() != null){
+                NodoDoble derecho = temporal.getDer();
+                while(derecho != null){
+                    if(temporal.compareTo(derecho)){
+                        Object dato = temporal.getDato();
+                        temporal.setDato(derecho.getDato());
+                        derecho.setDato(dato);
+                    }
+                    derecho = derecho.getDer();
+                }
+                temporal = temporal.getDer();
+            }
+        }
+    }
+    
     @Override
     public String toString(){
         if(this.esVacia()) return "Lista Vacia";

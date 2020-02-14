@@ -115,7 +115,8 @@ public class ListaEnlazada {
     
     public void insertarPorIndice(Object dato, int indice){
         Nodo nuevo = new Nodo(dato);
-        if(this.esVacia()){
+        if(this.esVacia() || indice == 1){
+            nuevo.setSiguiente(primero);
             primero = nuevo;
         }else if(indice > num_nodos || indice <= 0){
             Nodo temporal = primero;
@@ -123,10 +124,6 @@ public class ListaEnlazada {
                 temporal = temporal.getSiguiente();
             }
             temporal.setSiguiente(nuevo);
-        }else if(indice == 1){
-           Nodo temporal = primero;
-           nuevo.setSiguiente(temporal);
-           primero = nuevo;
         }else{
             Nodo temporal = primero;
             Nodo previo = null;

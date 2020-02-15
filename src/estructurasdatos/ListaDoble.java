@@ -18,6 +18,11 @@ public class ListaDoble {
         return num_nodos;
     }
     
+    public void vaciar(){
+        primero = null;
+        num_nodos = 0;
+    }
+    
     public void insertarPrincipio(Object dato){
         NodoDoble nuevo = new NodoDoble(dato);
         if(this.esVacia()){

@@ -97,7 +97,7 @@ public class ListaEnlazada {
     }
     
     public void eliminarPorIndice(int indice){
-        if(indice <= num_nodos){
+        if(indice <= num_nodos && indice > 0){
             if(indice == 1){
                 primero = primero.getSiguiente();
             }else{
@@ -139,7 +139,7 @@ public class ListaEnlazada {
     
     public Nodo getNodoPorIndice(int indice){
         Nodo nodo = new Nodo();
-        if(indice <= num_nodos){
+        if(indice <= num_nodos && indice > 0){
             if(indice == 1){
                 nodo = primero;
             }else{

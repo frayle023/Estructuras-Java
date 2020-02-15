@@ -20,6 +20,12 @@ public class ListaCircular {
         return this.num_nodos;
     }
     
+    public void vaciar(){
+        primero = null;
+        ultimo = null;
+        num_nodos = 0;
+    }
+    
     public boolean esVacia(){
         return this.primero == null && this.ultimo == null && this.num_nodos == 0;
     }
@@ -31,12 +37,27 @@ public class ListaCircular {
             primero = ultimo = nuevo;
         }else{
             Nodo temporal = ultimo;
-            nuevo.setSiguiente(temporal);
             temporal.setSiguiente(nuevo);
+            nuevo.setSiguiente(primero);
             ultimo = nuevo;
         }
         this.num_nodos++;
     }
+    
+    public void insertarPrincipio(Object dato){
+        Nodo nuevo = new Nodo(dato);
+        if(this.esVacia()){
+            nuevo.setSiguiente(nuevo);
+            primero = ultimo = nuevo;
+        }else{
+            nuevo.setSiguiente(primero);
+            primero = nuevo;
+            ultimo.setSiguiente(primero);
+        }
+        this.num_nodos++;
+    }
+    
+    
     
     
     @Override

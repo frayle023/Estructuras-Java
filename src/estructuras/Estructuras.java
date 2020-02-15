@@ -13,8 +13,12 @@ public class Estructuras {
         lista.insertarFinal(44);
         lista.insertarPrincipio(66);
         
-      
-         
+        lista.eliminarFinal();
+        lista.eliminarFinal();
+        lista.eliminarFinal();
+        lista.eliminarFinal();
+        lista.eliminarFinal();
+        
         System.out.println(lista.toString());
         System.out.println("Hay: " + lista.getContador() + " nodos");
         
